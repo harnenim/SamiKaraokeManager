@@ -137,7 +137,7 @@ public class Main extends Application {
 			primaryStage.setScene(new Scene(root, 400, 700));
 			primaryStage.setTitle("노래방 자막 만들기");
 			primaryStage.show();
-			this.primaryStage = primaryStage;
+			this.primaryStage = primaryStage; // 창 크기 변경이 가능하도록 주긴 했는데 warning
 
 		} catch(Exception e) {
 			e.printStackTrace();
