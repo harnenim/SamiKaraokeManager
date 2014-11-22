@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="karaoke.Step4">
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="원문 활성 색" />
+            <ColorPicker fx:id="cWon1" onAction="#refresh" />
+            <Label text="원문 비활성 색" />
+            <ColorPicker fx:id="cWon2" onAction="#refresh" />
+            <Separator prefWidth="200.0" />
+            <Label text="독음 활성 색" />
+            <ColorPicker fx:id="cDok1" onAction="#refresh" />
+            <Label text="독음 비활성 색" />
+            <ColorPicker fx:id="cDok2" onAction="#refresh" />
+            <Separator prefWidth="200.0" />
+            <Label text="번역 색" />
+            <ColorPicker fx:id="cHae" onAction="#refresh" />
+            <Separator prefWidth="200.0" />
+            <Label text="프리셋" />
+            <RadioButton fx:id="radio0" mnemonicParsing="false" onAction="#set0" selected="true" text="[원문]&#10;(번역)" />
+            <RadioButton fx:id="radio1" mnemonicParsing="false" onAction="#set1" text="[원문]&#10;[번역]" />
+            <RadioButton fx:id="radio2" mnemonicParsing="false" onAction="#set2" text="[원문]&#10;[독음]&#10;[번역]" wrapText="true" />
+            <RadioButton fx:id="radio3" mnemonicParsing="false" onAction="#set3" text="(독음)&#10;[원문]&#10;[번역]" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="500.0" prefWidth="300.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="review" prefWidth="2000.0" spacing="10.0" style="-fx-background-color: black;" />
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <TextArea fx:id="output" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <Button mnemonicParsing="false" onAction="#prev" prefWidth="400.0" text="이전" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
