@@ -51,14 +51,4 @@ public class Utf32 {
 			result.append(decode(x));
 		return result.toString();
 	}
-
-	public static void main(String[] args) {
-		String str = "1234abcd가나다라掴摑😁🙏🚀😂🈳";
-		System.out.println(str);
-		int[] utf32 = Utf32.encode(str);
-		for(int x : utf32)
-			System.out.println(x);
-		System.out.println(Utf32.decode(utf32));
-	}
-
 }
