@@ -46,10 +46,12 @@ public class Lyrics {
 		}
 		
 		String[] lines = str.replace("\n\r",  "\n").split("\n");
+		for(int i=0; i<lines.length; i++)
+			lines[i] = lines[i].trim();
 		for(int i=0; i<lines.length; i+=spacingLine) {
-			if(lines[i].length()>2) {
-				if(i+1<lines.length && lines[i+1].length()>2) {
-					if(i+2<lines.length && lines[i+2].length()>2) {
+			if(lines[i].length()>1) {
+				if(i+1<lines.length && lines[i+1].length()>1) {
+					if(i+2<lines.length && lines[i+2].length()>1) {
 						this.lines.add(new LyricsLine(lines[i], lines[i+1], lines[i+2], 3));
 						i += 3;
 						
@@ -76,22 +78,5 @@ public class Lyrics {
 	}
 	public int size() {
 		return lines.size();
-	}
-
-	public static void main(String[] args) {
-		Lyrics test = new Lyrics(
-				new StringBuilder()
-				.append("asdf\n").append("ㅁㄴㅇㄹ\n").append("ㅂㅈㄷㄱ\n")
-				.append("\n")
-				.append("asdf\n").append("ㅂㅈㄷㄱ\n")
-				.append("\n")
-				.append("asdf\n").append("ㅁㄴㅇㄹ\n").append("ㅂㅈㄷㄱ\n")
-				.append("\n").append("\n").append("\n")
-				.append("asdf\n").append("ㅁㄴㅇㄹ\n").append("ㅂㅈㄷㄱ")
-				.toString()
-			);
-		
-		System.out.println(test);
-		System.out.println(1);
 	}
 }
