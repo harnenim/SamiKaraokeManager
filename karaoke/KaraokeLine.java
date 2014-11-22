@@ -15,6 +15,7 @@ public class KaraokeLine {
 	private int[]      vDok; // 독음 글자별 음절 수
 	private String     hae;  // 번역문 - beon 같은 변수명은 이상함(?)
 	private int length;
+	private int type;
 	public int getType() {
 		return type;
 	}
@@ -23,7 +24,6 @@ public class KaraokeLine {
 		public HBox   get    (KaraokeLine line, int pos);
 		public String getSAMI(KaraokeLine line, int pos);
 	}
-	private int type;
 	private static Preset preset;
 	private static Color cw1;
 	private static Color cw2;
