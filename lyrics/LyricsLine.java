@@ -9,7 +9,7 @@ public class LyricsLine {
 	public LyricsLine() {
 		this("","","",0);
 	}
-	public LyricsLine(String won, String dok, String hae,int type) {
+	public LyricsLine(String won, String dok, String hae, int type) {
 		this.won  = won;
 		this.dok  = dok;
 		this.hae  = hae;
