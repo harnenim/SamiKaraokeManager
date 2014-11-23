@@ -340,7 +340,7 @@ public class KaraokeLine {
 			
 			// 걸친 문자
 			if(i<=j) {
-				passed -= (int)passed;
+				passed -= Math.floor(passed);
 				result.append("<FONT color=\"#").append(CM.code(c1, c2, passed)).append("\">");
 				result.append(Utf32.decode(c[i++]));
 				result.append("</FONT>");
