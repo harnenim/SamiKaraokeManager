@@ -24,7 +24,7 @@ public class KanjiList {
 	{
 		try {
 //			BufferedReader in = new BufferedReader(new FileReader("C:\\kanji\\list"));
-			URL url = new URL("http://noitamina.moe/kanji.list");
+			URL url = new URL("https://ohli.moe/kanji.list");
 			URLConnection urlConn = url.openConnection();
 			if(urlConn!=null) {
 				BufferedReader in = new BufferedReader(new InputStreamReader(urlConn.getInputStream(), "UTF-8"));
